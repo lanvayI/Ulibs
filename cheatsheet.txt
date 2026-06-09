@@ -1,0 +1,60 @@
+Cheatsheet:
+  LinkedList:
+typedef struct Node;
+struct Node* list_create_head(int value);
+struct Node* list_push_back(struct Node* node,int value); // Go to the last node and add
+void list_pop(struct Node* node); //just delete
+void free_list(struct Node* node); //Free/delete entire list
+int get_list_length(struct Node* head);
+void print_list(struct Node* start); // print every node starting on start
+void list_free(struct Node* head, struct Node* node); // Free/Remove Node, if not last -> organize list
+void swap_node(struct Node* node1, struct Node* node2); //this swap entirely(pointer and data), usa only if you really need
+void swap_node_data(struct Node* node1, struct Node* node2); // this only swap data, faster
+int list_compare_data(struct Node* node1, struct Node* node2); //equal = 0, n1 > n2 = 1, n1 < n2 = -1
+struct Node* list_get_middle(struct Node* startingNode);
+void list_bubble_sort(struct Node* head);
+
+  myctype:
+int is_digit(char c);
+int is_alpha(char c);
+void to_lower(char* c);
+void to_upper(char* c);
+
+  mystring:
+int my_strlen(char* c);
+void my_strcpy(char* origin, char* destiny);
+int my_strcmp(char* one, char* two);
+char* my_strcat(char* string1, char string2);
+
+  mymem:
+void* my_memset(void* src, int value, size_t length);
+void* my_memcpy(void* src, void* destiny, size_t length);
+void* my_memmove(const void* src,void* dest, size_t length);
+
+  charTools:
+int count_char(char* c);
+int count_only_letters(char *c);
+int count_vowels(char *c);
+int count_consonants(char *c);
+int is_palindrome(char *c);
+int is_empty(char *c);
+int has_only_digits(char *c);
+void reverse_string(char *c);
+void string_to_upper(char *c);
+void string_to_lower(char *c);
+int find_char(char *str,char c); // Find first char
+
+  array_minilib:
+int ARRAY_SIZE(arr);
+void print_array(int *arr, int size, int withSpace); // array, size, bool spaces between numbers?
+int array_find(int *arr,int size, int objective);
+void array_reverse(int *arr,int size);
+void array_copy(int *arr, int *arr2, int size);
+void array_bubble_sort(int *arr, int size);
+
+  vector in /smaller_stuff/vectorC/
+vector* Vector_Init(size_t esize);
+void EmplaceBack(vector* list,void *data);
+void PopBack(vector* list);
+void print_info(vector* lista); //basic info, size, n items and element size
+unsigned char* IAt(vector* lista,int index, size_t esize);//Item At Index
