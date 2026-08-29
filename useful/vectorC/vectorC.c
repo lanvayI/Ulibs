@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "../include/vectorC.h"
+#include "vectorC.h"
 #define INCREASE_SIZE 5
 
 vector** v_array = NULL;
